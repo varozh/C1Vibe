@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "retail-1c": {
+      "type": "stdio",
+      "command": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "D:\\002_BASE\\Vibe\\mcp-retail\\server.ps1"]
+    },
+    "hrm-1c": {
+      "type": "stdio",
+      "command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "D:\\002_BASE\\Vibe\\mcp-retail\\server.ps1", "-Config", "D:\\002_BASE\\Vibe\\mcp-hrm\\config.json"]
+    },
+    "trade-1c": {
+      "type": "stdio",
+      "command": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "D:\\002_BASE\\Vibe\\mcp-retail\\server.ps1", "-Config", "D:\\002_BASE\\Vibe\\mcp-trade\\config.json"]
+    }
+  }
+}

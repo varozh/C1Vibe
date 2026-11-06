@@ -1,0 +1,9 @@
+{
+  "name": "hrm-1c",
+  "server": "bl-morion",
+  "ref": "HRM30",
+  "user": "Клод",
+  "passwordEnc": "01000000d08c9ddf0115d1118c7a00c04fc297eb01000000235672e6d56fb1478a20bbd4d32182f100000000020000000000106600000001000020000000378fe3ba198c0c458473c8369ac061e6586f48b6202a771543b07e9dcd5ae8f8000000000e8000000002000020000000e8ecb9e222f1593d4d81cde5fab2906511f1cef29d34f9ace380b1f7fffa832d100000000cdab3b2dad86f291be4beba46c0c497400000007e5db7b82bc4f9b65f1f543bdbc15aad619da0ee77c5b056d534ee1cbcfaf346c9c1320d9e37fae01419041e2175706e479ab94b3824a6e2aa25d07e4410812d",
+  "instructions": "Чтение данных 1С:Зарплата и управление персоналом 3.1 (база bl-morion/HRM30). Сначала describe (find/object), чтобы узнать точные имена таблиц и полей, затем query.",
+  "queryNote": "Платформа 8.3.27 — доступен синтаксис запросов 8.3."
+}

@@ -1,0 +1,8 @@
+{
+  "name": "trade-1c",
+  "server": "bl-isoflex",
+  "ref": "trade",
+  "user": "Клод",
+  "passwordEnc": "01000000d08c9ddf0115d1118c7a00c04fc297eb01000000235672e6d56fb1478a20bbd4d32182f100000000020000000000106600000001000020000000bf5b7fa0b2dbf9c55329fe6f737a891c3afc71c1a96e7044ca2ebf37781c2484000000000e8000000002000020000000db9090e3c0c4a48d69c9e13431971b4817b5761f837a7f4fe40885d7b6d3fa5c1000000041ed49d80c1ce91dcb368fe83f8ce5ac400000001da5257622c306020106fbad55c18dfaaa1096f1646568ec89ccd2e673d1c38f4caeed7cab2f0a8e40eabec0f7a5f80d4274dcf8029f13779fd4ff453b9ff215",
+  "instructions": "Чтение данных 1С:Управление торговлей (база bl-isoflex/trade). Сначала describe (find/object), чтобы узнать точные имена таблиц и полей, затем query."
+}
