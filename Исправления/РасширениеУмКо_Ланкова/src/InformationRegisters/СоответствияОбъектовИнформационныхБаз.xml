@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<InformationRegister uuid="c9e48d3d-8c7f-4ed2-ba99-bc817af431a0">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.СоответствияОбъектовИнформационныхБаз" category="Record">
+				<xr:TypeId>beb709be-28cf-4f1b-a0f4-aa7dbdae20e8</xr:TypeId>
+				<xr:ValueId>a0ebe21b-461c-43f0-8550-cda9fa0f9473</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.СоответствияОбъектовИнформационныхБаз" category="Manager">
+				<xr:TypeId>937f3594-25e7-4f79-90bd-ceb9694c64cf</xr:TypeId>
+				<xr:ValueId>0b1e0a15-c6c2-4b86-aa2c-4e400d1c4918</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.СоответствияОбъектовИнформационныхБаз" category="Selection">
+				<xr:TypeId>7d41009a-4bdf-4bce-87ed-bbe286ff9302</xr:TypeId>
+				<xr:ValueId>795c74e3-e073-4af4-a8b5-d2aab73967c5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.СоответствияОбъектовИнформационныхБаз" category="List">
+				<xr:TypeId>04d41be1-11f4-460b-9885-93488e362ae3</xr:TypeId>
+				<xr:ValueId>c1a8ed73-1946-40e3-9a3a-1d6ffc389d9b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.СоответствияОбъектовИнформационныхБаз" category="RecordSet">
+				<xr:TypeId>f780c297-284c-44dd-a8f2-5d235eedae90</xr:TypeId>
+				<xr:ValueId>7b5f4a53-fe58-4fe9-b36d-036da3ec93cc</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.СоответствияОбъектовИнформационныхБаз" category="RecordKey">
+				<xr:TypeId>f6dd64a8-3317-46d0-81b6-c66d1f369223</xr:TypeId>
+				<xr:ValueId>4a38c894-3dc0-41f7-abdb-e0ab1e307aa6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.СоответствияОбъектовИнформационныхБаз" category="RecordManager">
+				<xr:TypeId>93ac170b-ff05-4325-80a6-5f015fc9cb34</xr:TypeId>
+				<xr:ValueId>0110d636-19bc-4644-8303-f02bfa1a7dd0</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:PropertyState>
+				<xr:Property>RecordSetModule</xr:Property>
+				<xr:State>Extended</xr:State>
+			</xr:PropertyState>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>СоответствияОбъектовИнформационныхБаз</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>20d655a7-788c-48bc-83ae-25003106bedb</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects/>
+	</InformationRegister>
+</MetaDataObject>

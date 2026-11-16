@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.20">
+	<ConfigVersions>
+		<Metadata name="CommonModule.УмКо_ПодпискиНаСобытия" id="6cf695c3-0ce8-4682-9a0f-1160bb548c6d" configVersion="e00a19a4ca07459bf1d46273600612581c7a0c69"/>
+		<Metadata name="CommonModule.УмКо_ПодпискиНаСобытия.Module" id="6cf695c3-0ce8-4682-9a0f-1160bb548c6d.0" configVersion="a5ca3602614bbc02d97c26580c9e5848602e2f03"/>
+		<Metadata name="Configuration.УмКо_Ланкова" id="8ca63436-dc95-43db-88c0-7815b52f338e" configVersion="633590bfdda088f5b21009212efcd00f127a9ccb"/>
+		<Metadata name="DataProcessor.КонвертацияОбъектовИнформационныхБаз" id="274f3c84-e957-4362-8dd0-4a4d48050a18" configVersion="0012d48e190e814dae962158738d0005f4e6bb5e">
+			<Metadata name="DataProcessor.КонвертацияОбъектовИнформационныхБаз.Attribute.УзелОбменаЗагрузкаДанных" id="dad32953-71f9-4a15-9d0b-008b77a2d98f"/>
+		</Metadata>
+		<Metadata name="DataProcessor.КонвертацияОбъектовИнформационныхБаз.ObjectModule" id="274f3c84-e957-4362-8dd0-4a4d48050a18.0" configVersion="a60a183afd7239ca6a6c91fb4cc2787889ac0681"/>
+		<Metadata name="Document.ВозвратТоваровОтПокупателя" id="2f83c09a-47f1-41bf-b395-2e1e2dd1836b" configVersion="95b85c3efab73f7401dffa184ea1d199a094a7da"/>
+		<Metadata name="Document.ОтчетОРозничныхПродажах" id="b67540af-3c86-4664-a768-b0f669d268b9" configVersion="de93077ba97288aeab0e67d81cd2e238182c2c1d">
+			<Metadata name="Document.ОтчетОРозничныхПродажах.TabularSection.Товары.Attribute.ДатаЧекаККМ" id="0af52349-9c63-4524-97b0-759094dc1f32"/>
+			<Metadata name="Document.ОтчетОРозничныхПродажах.TabularSection.Товары" id="d2cdfde1-5816-4a90-9030-802c547ef217"/>
+			<Metadata name="Document.ОтчетОРозничныхПродажах.TabularSection.Товары.Attribute.НомерЧекаККМ" id="f96b6db7-4d8b-4d6d-b90d-ca4952fb2329"/>
+		</Metadata>
+		<Metadata name="Document.ПоступлениеТоваровУслуг" id="3dba9754-335b-49c4-be0b-3ebd0eff6e09" configVersion="b8c3a26f3f89e552572651b0d39c2cff16ba1998"/>
+		<Metadata name="Document.РеализацияТоваровУслуг" id="a82beab7-2980-44c0-9429-6ab7c8556fd4" configVersion="bd5a891d7b37158e548abe30c49dc604e9dd1963"/>
+		<Metadata name="EventSubscription.УмКо_ПриЗагрузкеВозвратовТоваровОтПокупателей" id="d9a33e33-cb4c-439e-9d0c-620eba73eb72" configVersion="18f914008ea5ed9fb0fa9ae1babbb6e4397b5db5"/>
+		<Metadata name="EventSubscription.УмКо_ПриЗагрузкеОтчетовОРозничныхПродажахИзУТПередЗаписью" id="305c578a-715c-4637-8a1d-0b95a1bef033" configVersion="b33db271dabda6a78d34a23db9cc8ce1e89ecfac"/>
+		<Metadata name="EventSubscription.УмКо_ПриЗагрузкеПоступленийИРеализцийИзУТПередЗаписью" id="6cd1f693-34ce-4628-9a6f-80d08ce784d9" configVersion="aeb6cfda4772be4e6257ab2fff44346c9a3c583e"/>
+		<Metadata name="ExchangePlan.ОбменУправлениеТорговлей103БухгалтерияПредприятия30" id="b96c395f-bbf2-411f-91de-4a91dc73b397" configVersion="959b56c7eadf0fbca7dc78512beb0839a337c7b6"/>
+		<Metadata name="ExchangePlan.ОбменУправлениеТорговлей103БухгалтерияПредприятия30.Template.ПравилаОбменаКорреспондента" id="45dc44aa-d563-4b1e-b31b-d8805aaa911c" configVersion="8e53a25d5a98c0f7fdf0eeef6d2687485f9b62ba"/>
+		<Metadata name="ExchangePlan.ОбменУправлениеТорговлей103БухгалтерияПредприятия30.Template.ПравилаОбменаКорреспондента.Template" id="45dc44aa-d563-4b1e-b31b-d8805aaa911c.0" configVersion="ce379b6585000d2ba7fb5a6bda04eb6b59636747"/>
+		<Metadata name="InformationRegister.СоответствияОбъектовИнформационныхБаз" id="c9e48d3d-8c7f-4ed2-ba99-bc817af431a0" configVersion="3388c0036470b4a01471b2b17d977fe16f97026f"/>
+		<Metadata name="InformationRegister.СоответствияОбъектовИнформационныхБаз.RecordSetModule" id="c9e48d3d-8c7f-4ed2-ba99-bc817af431a0.1" configVersion="fa79e5eb115ff459026145f5f8bdfa41b50882b1"/>
+		<Metadata name="Language.Русский" id="188e1594-37fc-4f0c-862b-87f8544048a2" configVersion="ca84dbce3139c1abcd1f7e213b4d1a5ce5d71d65"/>
+		<Metadata name="Role.Расш1_ОсновнаяРоль" id="df4c78e9-b5fe-4d8a-a27c-7ac7b7f6c96d" configVersion="163cf4f511448a4452e0211f7b099a448cc5a598"/>
+	</ConfigVersions>
+</ConfigDumpInfo>

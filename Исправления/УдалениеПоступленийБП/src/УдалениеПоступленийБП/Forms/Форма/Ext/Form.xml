@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Удаление непроведенных поступлений, загруженных из УТ</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаполнить" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Заполнить</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаОтметитьВсе" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтметитьВсе</CommandName>
+				<ExtendedTooltip name="ФормаОтметитьВсеРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаСнятьВсе" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СнятьВсе</CommandName>
+				<ExtendedTooltip name="ФормаСнятьВсеРасширеннаяПодсказка" id="6"/>
+			</Button>
+			<Button name="ФормаУдалитьПоступления" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УдалитьПоступления</CommandName>
+				<ExtendedTooltip name="ФормаУдалитьПоступленияРасширеннаяПодсказка" id="8"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтбор" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Какие поступления искать (только непроведенные)</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПериод" id="12">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<InputField name="НачалоПериода" id="14">
+							<DataPath>НачалоПериода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата с</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<InputField name="КонецПериода" id="17">
+							<DataPath>КонецПериода</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>по (пусто - без ограничения)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КонецПериодаКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="КонецПериодаРасширеннаяПодсказка" id="19"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ИННОрганизаций" id="20">
+					<DataPath>ИННОрганизаций</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИНН организаций через запятую</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИННОрганизацийКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ИННОрганизацийРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="НомераДокументов" id="23">
+					<DataPath>НомераДокументов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Только номера (через запятую, пусто - все)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомераДокументовКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="НомераДокументовРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<CheckBoxField name="ТолькоИзУТ" id="26">
+					<DataPath>ТолькоИзУТ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Только загруженные из УТ (номер начинается с "УТ")</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТолькоИзУТКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТолькоИзУТРасширеннаяПодсказка" id="28"/>
+				</CheckBoxField>
+				<RadioButtonField name="Условие" id="29">
+					<DataPath>Условие</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условие</v8:content>
+						</v8:item>
+					</Title>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Есть строки "Зачет авансов" без документа аванса</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ЗачетАвансов</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Не заполнены счета учета / счет расчетов или склад "Объект не найден"</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ПустыеСчета</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Любое из этих условий</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Любое</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Все непроведенные (без условия)</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Все</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="УсловиеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="УсловиеРасширеннаяПодсказка" id="31"/>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДействие" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Что сделать с отмеченными</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаДействиеРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<RadioButtonField name="Режим" id="34">
+					<DataPath>Режим</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Пометить на удаление</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Пометить</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Удалить окончательно (только если на документ нет ссылок из других документов)</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Удалить</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="РежимКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="РежимРасширеннаяПодсказка" id="36"/>
+				</RadioButtonField>
+				<CheckBoxField name="УдалятьСчетаФактуры" id="37">
+					<DataPath>УдалятьСчетаФактуры</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вместе с поступлением удалять его счет-фактуру полученный</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УдалятьСчетаФактурыКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="УдалятьСчетаФактурыРасширеннаяПодсказка" id="39"/>
+				</CheckBoxField>
+				<LabelDecoration name="Пояснение" id="40">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проведенные документы не обрабатываются. Изменения не регистрируются к обмену - пометка и удаление не уйдут в УТ. Удаление окончательное, сделайте копию базы.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПояснениеКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ПояснениеРасширеннаяПодсказка" id="42"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Поступления" id="50">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<DataPath>Поступления</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найденные поступления</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПоступленияКонтекстноеМеню" id="51"/>
+			<AutoCommandBar name="ПоступленияКоманднаяПанель" id="52">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПоступленияРасширеннаяПодсказка" id="53"/>
+			<SearchStringAddition name="ПоступленияСтрокаПоиска" id="54">
+				<AdditionSource>
+					<Item>Поступления</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоступленияСтрокаПоискаКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="ПоступленияСтрокаПоискаРасширеннаяПодсказка" id="56"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПоступленияСостояниеПросмотра" id="57">
+				<AdditionSource>
+					<Item>Поступления</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоступленияСостояниеПросмотраКонтекстноеМеню" id="58"/>
+				<ExtendedTooltip name="ПоступленияСостояниеПросмотраРасширеннаяПодсказка" id="59"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПоступленияУправлениеПоиском" id="60">
+				<AdditionSource>
+					<Item>Поступления</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоступленияУправлениеПоискомКонтекстноеМеню" id="61"/>
+				<ExtendedTooltip name="ПоступленияУправлениеПоискомРасширеннаяПодсказка" id="62"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ПоступленияПометка" id="63">
+					<DataPath>Поступления.Пометка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоступленияПометкаКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ПоступленияПометкаРасширеннаяПодсказка" id="65"/>
+				</CheckBoxField>
+				<InputField name="ПоступленияДокумент" id="66">
+					<DataPath>Поступления.Документ</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоступленияДокументКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ПоступленияДокументРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="ПоступленияОрганизация" id="69">
+					<DataPath>Поступления.Организация</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоступленияОрганизацияКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ПоступленияОрганизацияРасширеннаяПодсказка" id="71"/>
+				</InputField>
+				<InputField name="ПоступленияКонтрагент" id="72">
+					<DataPath>Поступления.Контрагент</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоступленияКонтрагентКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ПоступленияКонтрагентРасширеннаяПодсказка" id="74"/>
+				</InputField>
+				<InputField name="ПоступленияСумма" id="75">
+					<DataPath>Поступления.Сумма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоступленияСуммаКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ПоступленияСуммаРасширеннаяПодсказка" id="77"/>
+				</InputField>
+				<InputField name="ПоступленияПричина" id="78">
+					<DataPath>Поступления.Причина</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоступленияПричинаКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ПоступленияПричинаРасширеннаяПодсказка" id="80"/>
+				</InputField>
+				<InputField name="ПоступленияСчетаФактуры" id="81">
+					<DataPath>Поступления.СчетаФактуры</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоступленияСчетаФактурыКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ПоступленияСчетаФактурыРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="ПоступленияРезультат" id="84">
+					<DataPath>Поступления.Результат</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоступленияРезультатКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ПоступленияРезультатРасширеннаяПодсказка" id="86"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.УдалениеПоступленийБП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НачалоПериода" id="2">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонецПериода" id="3">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИННОрганизаций" id="4">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомераДокументов" id="5">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоИзУТ" id="6">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Условие" id="7">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Режим" id="8">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УдалятьСчетаФактуры" id="9">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Поступления" id="10">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удалить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Документ" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступление</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Организация" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Причина" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Что не так</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СчетаФактуры" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счета-фактуры</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Результат" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти поступления</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Заполнить</Action>
+		</Command>
+		<Command name="ОтметитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтметитьВсе</Action>
+		</Command>
+		<Command name="СнятьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СнятьВсе</Action>
+		</Command>
+		<Command name="УдалитьПоступления" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить для отмеченных</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УдалитьПоступления</Action>
+		</Command>
+	</Commands>
+</Form>
