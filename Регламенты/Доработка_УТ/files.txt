@@ -1,0 +1,4 @@
+﻿Configuration.xml
+CommonModules\БЛ_ПанельОстатковУТ.xml
+CommonModules\БЛ_ПанельОстатковУТ\Ext\Module.bsl
+ScheduledJobs\БЛ_ВыгрузкаОстатковНаПанель.xml

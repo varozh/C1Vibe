@@ -1,0 +1,15 @@
+﻿Configuration.xml
+Interfaces\Полный.xml
+Interfaces\Полный\Ext\Interface.bin
+Reports\БЛ_АнализОстатковТоваровНаСкладахШК.xml
+Reports\БЛ_АнализОстатковТоваровНаСкладахШК\Ext\ObjectModule.bsl
+Reports\БЛ_АнализОстатковТоваровНаСкладахШК\Forms\Форма.xml
+Reports\БЛ_АнализОстатковТоваровНаСкладахШК\Forms\Форма\Ext\Form.bin
+Roles\ЗаведующийСкладом.xml
+Roles\Кладовщик.xml
+Roles\МенеджерПоЗакупкам.xml
+Roles\МенеджерПоПродажам.xml
+Roles\ЗаведующийСкладом\Ext\Rights.xml
+Roles\Кладовщик\Ext\Rights.xml
+Roles\МенеджерПоЗакупкам\Ext\Rights.xml
+Roles\МенеджерПоПродажам\Ext\Rights.xml
