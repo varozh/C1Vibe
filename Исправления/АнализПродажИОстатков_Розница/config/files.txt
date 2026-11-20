@@ -1,0 +1,7 @@
+﻿Configuration.xml
+Interfaces\Полный.xml
+Interfaces\Полный\Ext\Interface.bin
+Reports\БЛ_АнализПродажИОстатков.xml
+Reports\БЛ_АнализПродажИОстатков\Ext\ObjectModule.bsl
+Reports\БЛ_АнализПродажИОстатков\Templates\ОсновнаяСхемаКомпоновкиДанных.xml
+Reports\БЛ_АнализПродажИОстатков\Templates\ОсновнаяСхемаКомпоновкиДанных\Ext\Template.xml

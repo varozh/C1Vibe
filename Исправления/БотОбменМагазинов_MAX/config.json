@@ -1,0 +1,21 @@
+{
+    "retail":  {
+                   "server":  "bl-isoflex",
+                   "ref":  "retail",
+                   "user":  "Клод",
+                   "passwordEnc":  "01000000d08c9ddf0115d1118c7a00c04fc297eb01000000235672e6d56fb1478a20bbd4d32182f100000000020000000000106600000001000020000000653fe3e774982637a55f2f332e3c6eadafcd8991703808321c89fbe521102e07000000000e8000000002000020000000dc2706a8b0a8e54e2a5e27cf342ec6e55aa6cf6c8784b99b922e254ef3e6689510000000bc7a1b64acdd83c2ddf60013eceaf29940000000c51af061dbf0890fba76e0a1467713a5000d8687e8bdfebf730e8d354e5c056cd2ae4bb4e16b15b52940cc22f005c75b1ae0a563b599a82b7ad9242385872b97"
+               },
+    "apiUrl":  "https://platform-api2.max.ru",
+    "tokenEnc":  "01000000d08c9ddf0115d1118c7a00c04fc297eb01000000235672e6d56fb1478a20bbd4d32182f10000000002000000000010660000000100002000000060b2d0c075ded68ce13ee9f3c4f10323ee2c1f8efc9222d56f6e4b4bea0471ec000000000e8000000002000020000000c47e7f4d32c56b6b2f75ba0d726de191babfd9a37e5f68973cdc353acfdcd992b0000000bb77859c6c30333a72731f0f99741fea83ed726274ed02039a7f618db72cd22579f41b7b4c92b9932fa75cddeac1176871ad889efee5cec7cf492417bd0d59801ef680378ec5afe67061f78c49a5711cbc1b15fc95924843ebad78ab390245f9830f862976bddcca82c8ff033ba4e423bc57b98ddabc5befdb2f5f8690d1943c2d7f73ccc002f6a82c994ebdf7578844f761f70f60f8a76830b46f20c9fcf1746aaaf7a4dd7674e3381fa0000b5fb678400000006fc713bf7780d29c760f0e2a338498764f8c0d516b70b5060022d353494b45a511dbb33479fd5860469849f1c69398dd92dc31a6ffb119271a1b13d28589e943",
+    "chatId":  -72899188920351,
+    "eveningFrom":  "20:00",
+    "reminderTime":  "20:00",
+    "reportTime":  "07:00",
+    "exclude":  [
+
+                ],
+    "reminderText":  "Добрый вечер! После закрытия смены выполните, пожалуйста, обмен с центральной базой Розницы.",
+    "reportHeader":  "Не выполнили вечерний обмен с центральной базой:",
+    "reportFooter":  "Выполните, пожалуйста, обмен сейчас",
+    "reportAllOk":  "Все магазины выполнили вечерний обмен. Спасибо!"
+}
